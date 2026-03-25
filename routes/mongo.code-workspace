@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../mongo"
+		},
+		{
+			"path": "../../../../projects/frontend/apna-college"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../backend/majorproject"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "apna-college"
+	}
+}

@@ -1,0 +1,688 @@
+const listings = [
+  // 🌟 Trending (5)
+  {
+    title: "Trending Villa 1",
+    description: "Modern luxury stay",
+    image: { url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511", filename: "listingimage" },
+    price: 1200,
+    location: "Goa",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.8567, 15.2993] },
+    category: "Trending",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Trending Villa 2",
+    description: "Sea view villa",
+    image: { url: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6", filename: "listingimage" },
+    price: 1500,
+    location: "Mumbai",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [72.8777, 19.076] },
+    category: "Trending",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Trending Villa 3",
+    description: "Premium stay",
+    image: { url: "https://images.unsplash.com/photo-1570129477492-45c003edd2be", filename: "listingimage" },
+    price: 1800,
+    location: "Delhi",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.2090, 28.6139] },
+    category: "Trending",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Trending Villa 4",
+    description: "Luxury home",
+    image: { url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c", filename: "listingimage" },
+    price: 2000,
+    location: "Bangalore",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.5946, 12.9716] },
+    category: "Trending",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Trending Villa 5",
+    description: "City luxury stay",
+    image: { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c", filename: "listingimage" },
+    price: 1700,
+    location: "Pune",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.8567, 18.5204] },
+    category: "Trending",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+
+  // 🌾 Farms (5)
+  {
+    title: "Farm Stay 1",
+    description: "Peaceful farm",
+    image: { url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef", filename: "listingimage" },
+    price: 800,
+    location: "Punjab",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [75.3412, 31.1471] },
+    category: "Farms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Farm Stay 2",
+    description: "Nature stay",
+    image: { url: "https://images.unsplash.com/photo-1464226184884-fa280b87c399", filename: "listingimage" },
+    price: 900,
+    location: "Haryana",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [76.0856, 29.0588] },
+    category: "Farms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Farm Stay 3",
+    description: "Village experience",
+    image: { url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429", filename: "listingimage" },
+    price: 700,
+    location: "UP",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [80.9462, 26.8467] },
+    category: "Farms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Farm Stay 4",
+    description: "Green fields",
+    image: { url: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8", filename: "listingimage" },
+    price: 850,
+    location: "MP",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.4126, 23.2599] },
+    category: "Farms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Farm Stay 5",
+    description: "Organic living",
+    image: { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", filename: "listingimage" },
+    price: 950,
+    location: "Rajasthan",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [75.7873, 26.9124] },
+    category: "Farms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  } ,
+  ,
+  // 🌆 Iconic cities (5)
+  {
+    title: "City Stay 1",
+    description: "Central apartment",
+    image: { url: "https://images.unsplash.com/photo-1494526585095-c41746248156", filename: "listingimage" },
+    price: 2000,
+    location: "Delhi",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.2090, 28.6139] },
+    category: "Iconic cities",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "City Stay 2",
+    description: "Skyline view",
+    image: { url: "https://images.unsplash.com/photo-1467269204594-9661b134dd2b", filename: "listingimage" },
+    price: 2200,
+    location: "Mumbai",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [72.8777, 19.076] },
+    category: "Iconic cities",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "City Stay 3",
+    description: "Luxury apartment",
+    image: { url: "https://images.unsplash.com/photo-1486308510493-aa64833637b1", filename: "listingimage" },
+    price: 2100,
+    location: "Bangalore",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.5946, 12.9716] },
+    category: "Iconic cities",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "City Stay 4",
+    description: "Modern flat",
+    image: { url: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688", filename: "listingimage" },
+    price: 1800,
+    location: "Hyderabad",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [78.4867, 17.3850] },
+    category: "Iconic cities",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "City Stay 5",
+    description: "Premium city stay",
+    image: { url: "https://images.unsplash.com/photo-1493809842364-78817add7ffb", filename: "listingimage" },
+    price: 2300,
+    location: "Chennai",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [80.2707, 13.0827] },
+    category: "Iconic cities",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+
+  // 🛏 Rooms (5)
+  {
+    title: "Room 1",
+    description: "Cozy stay",
+    image: { url: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85", filename: "listingimage" },
+    price: 500,
+    location: "Delhi",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.2090, 28.6139] },
+    category: "Rooms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Room 2",
+    description: "Budget room",
+    image: { url: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267", filename: "listingimage" },
+    price: 400,
+    location: "Mumbai",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [72.8777, 19.076] },
+    category: "Rooms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Room 3",
+    description: "Comfort stay",
+    image: { url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511", filename: "listingimage" },
+    price: 600,
+    location: "Pune",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.8567, 18.5204] },
+    category: "Rooms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Room 4",
+    description: "Private room",
+    image: { url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2", filename: "listingimage" },
+    price: 550,
+    location: "Bangalore",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.5946, 12.9716] },
+    category: "Rooms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Room 5",
+    description: "Minimal room",
+    image: { url: "https://images.unsplash.com/photo-1493666438817-866a91353ca9", filename: "listingimage" },
+    price: 450,
+    location: "Jaipur",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [75.7873, 26.9124] },
+    category: "Rooms",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+
+  // 🏰 Castles (5)
+  {
+    title: "Castle Stay 1",
+    description: "Royal palace",
+    image: { url: "https://images.unsplash.com/photo-1568605114967-8130f3a36994", filename: "listingimage" },
+    price: 5000,
+    location: "Jaipur",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [75.7873, 26.9124] },
+    category: "Castles",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Castle Stay 2",
+    description: "Historic fort",
+    image: { url: "https://images.unsplash.com/photo-1505842465776-3d90f616310d", filename: "listingimage" },
+    price: 4800,
+    location: "Jodhpur",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.0243, 26.2389] },
+    category: "Castles",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Castle Stay 3",
+    description: "Luxury heritage",
+    image: { url: "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba", filename: "listingimage" },
+    price: 5200,
+    location: "Udaipur",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.7125, 24.5854] },
+    category: "Castles",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Castle Stay 4",
+    description: "Royal stay",
+    image: { url: "https://images.unsplash.com/photo-1501117716987-c8e1ecb210f9", filename: "listingimage" },
+    price: 5300,
+    location: "Bikaner",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.3119, 28.0229] },
+    category: "Castles",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Castle Stay 5",
+    description: "Grand palace",
+    image: { url: "https://images.unsplash.com/photo-1573843981267-be1999ff37cd", filename: "listingimage" },
+    price: 5500,
+    location: "Gwalior",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [78.1828, 26.2183] },
+    category: "Castles",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  ,
+  // 🏖 Beach (5)
+  {
+    title: "Beach Stay 1",
+    description: "Sea view villa",
+    image: { url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", filename: "listingimage" },
+    price: 2500,
+    location: "Goa",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.8278, 15.4909] },
+    category: "Beach",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Beach Stay 2",
+    description: "Ocean breeze",
+    image: { url: "https://images.unsplash.com/photo-1493558103817-58b2924bce98", filename: "listingimage" },
+    price: 2700,
+    location: "Kochi",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [76.2673, 9.9312] },
+    category: "Beach",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Beach Stay 3",
+    description: "Luxury beach house",
+    image: { url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e", filename: "listingimage" },
+    price: 2900,
+    location: "Chennai",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [80.2707, 13.0827] },
+    category: "Beach",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Beach Stay 4",
+    description: "Sunset view",
+    image: { url: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21", filename: "listingimage" },
+    price: 2600,
+    location: "Vizag",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [83.2185, 17.6868] },
+    category: "Beach",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Beach Stay 5",
+    description: "Coastal stay",
+    image: { url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e", filename: "listingimage" },
+    price: 2800,
+    location: "Pondicherry",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [79.8083, 11.9416] },
+    category: "Beach",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+
+  // ⛰ Mountain (5)
+  {
+    title: "Mountain Stay 1",
+    description: "Hill cabin",
+    image: { url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470", filename: "listingimage" },
+    price: 1800,
+    location: "Manali",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.1887, 32.2432] },
+    category: "Mountain",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Mountain Stay 2",
+    description: "Nature retreat",
+    image: { url: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", filename: "listingimage" },
+    price: 1700,
+    location: "Shimla",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.1734, 31.1048] },
+    category: "Mountain",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Mountain Stay 3",
+    description: "Peaceful hills",
+    image: { url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429", filename: "listingimage" },
+    price: 1900,
+    location: "Nainital",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [79.4591, 29.3803] },
+    category: "Mountain",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Mountain Stay 4",
+    description: "Cool weather stay",
+    image: { url: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e", filename: "listingimage" },
+    price: 2000,
+    location: "Darjeeling",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [88.2636, 27.0410] },
+    category: "Mountain",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Mountain Stay 5",
+    description: "Forest hills",
+    image: { url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e", filename: "listingimage" },
+    price: 2100,
+    location: "Ooty",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [76.6950, 11.4102] },
+    category: "Mountain",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  ,
+  // 🏊 Amazing pools (5)
+  {
+    title: "Pool Stay 1",
+    description: "Private pool villa",
+    image: { url: "https://images.unsplash.com/photo-1501117716987-c8e1ecb210f9", filename: "listingimage" },
+    price: 3000,
+    location: "Udaipur",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.7125, 24.5854] },
+    category: "Amazing pools",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Pool Stay 2",
+    description: "Infinity pool",
+    image: { url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511", filename: "listingimage" },
+    price: 3200,
+    location: "Goa",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.8278, 15.4909] },
+    category: "Amazing pools",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Pool Stay 3",
+    description: "Luxury pool house",
+    image: { url: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2", filename: "listingimage" },
+    price: 3500,
+    location: "Mumbai",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [72.8777, 19.076] },
+    category: "Amazing pools",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Pool Stay 4",
+    description: "Resort pool",
+    image: { url: "https://images.unsplash.com/photo-1521783593447-5702b9bfd267", filename: "listingimage" },
+    price: 3300,
+    location: "Jaipur",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [75.7873, 26.9124] },
+    category: "Amazing pools",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Pool Stay 5",
+    description: "Modern pool villa",
+    image: { url: "https://images.unsplash.com/photo-1576013551627-0c2c2e9f8b0b", filename: "listingimage" },
+    price: 3600,
+    location: "Bangalore",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.5946, 12.9716] },
+    category: "Amazing pools",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+
+  // 🏕 Camping (5)
+  {
+    title: "Camping Stay 1",
+    description: "Nature camping",
+    image: { url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee", filename: "listingimage" },
+    price: 700,
+    location: "Rishikesh",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [78.2676, 30.0869] },
+    category: "Camping",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Camping Stay 2",
+    description: "Forest camping",
+    image: { url: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d", filename: "listingimage" },
+    price: 800,
+    location: "Manali",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.1887, 32.2432] },
+    category: "Camping",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Camping Stay 3",
+    description: "Lake camping",
+    image: { url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429", filename: "listingimage" },
+    price: 750,
+    location: "Nainital",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [79.4591, 29.3803] },
+    category: "Camping",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Camping Stay 4",
+    description: "Hill camping",
+    image: { url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e", filename: "listingimage" },
+    price: 850,
+    location: "Ooty",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [76.6950, 11.4102] },
+    category: "Camping",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Camping Stay 5",
+    description: "Adventure camp",
+    image: { url: "https://images.unsplash.com/photo-1499696010181-8c6e8c0e7b7b", filename: "listingimage" },
+    price: 900,
+    location: "Leh",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.5770, 34.1526] },
+    category: "Camping",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+
+  // ❄ Arctic (5)
+  {
+    title: "Arctic Stay 1",
+    description: "Snow stay",
+    image: { url: "https://images.unsplash.com/photo-1482192596544-9eb780fc7f66", filename: "listingimage" },
+    price: 4000,
+    location: "Ladakh",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.5770, 34.1526] },
+    category: "Arctic",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Arctic Stay 2",
+    description: "Ice mountains",
+    image: { url: "https://images.unsplash.com/photo-1519681393784-d120267933ba", filename: "listingimage" },
+    price: 4200,
+    location: "Spiti",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [78.0, 32.2466] },
+    category: "Arctic",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Arctic Stay 3",
+    description: "Frozen valley",
+    image: { url: "https://images.unsplash.com/photo-1549880181-56a44cf4a9a5", filename: "listingimage" },
+    price: 4300,
+    location: "Kargil",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [76.1348, 34.5539] },
+    category: "Arctic",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Arctic Stay 4",
+    description: "Snow peaks",
+    image: { url: "https://images.unsplash.com/photo-1457269449834-928af64c684d", filename: "listingimage" },
+    price: 4100,
+    location: "Siachen",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.0, 35.0] },
+    category: "Arctic",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "Arctic Stay 5",
+    description: "Glacier stay",
+    image: { url: "https://images.unsplash.com/photo-1511497584788-876760111969", filename: "listingimage" },
+    price: 4500,
+    location: "Himachal",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.1734, 31.1048] },
+    category: "Arctic",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+
+  // 🏠 house (5)
+  {
+    title: "House 1",
+    description: "Family home",
+    image: { url: "https://images.unsplash.com/photo-1560185007-c5ca9d2c014d", filename: "listingimage" },
+    price: 1000,
+    location: "Pune",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [73.8567, 18.5204] },
+    category: "house",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "House 2",
+    description: "Modern home",
+    image: { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c", filename: "listingimage" },
+    price: 1200,
+    location: "Delhi",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.2090, 28.6139] },
+    category: "house",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "House 3",
+    description: "Luxury home",
+    image: { url: "https://images.unsplash.com/photo-1572120360610-d971b9b639c0", filename: "listingimage" },
+    price: 1300,
+    location: "Mumbai",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [72.8777, 19.076] },
+    category: "house",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "House 4",
+    description: "Simple house",
+    image: { url: "https://images.unsplash.com/photo-1449844908441-8829872d2607", filename: "listingimage" },
+    price: 900,
+    location: "Jaipur",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [75.7873, 26.9124] },
+    category: "house",
+    owner: "69b37f120616dcfa0f3c58aa"
+  },
+  {
+    title: "House 5",
+    description: "Cozy home",
+    image: { url: "https://images.unsplash.com/photo-1507089947367-19c1da9775ae", filename: "listingimage" },
+    price: 1100,
+    location: "Bangalore",
+    country: "India",
+    reviews: [],
+    geometry: { type: "Point", coordinates: [77.5946, 12.9716] },
+    category: "house",
+    owner: "69b37f120616dcfa0f3c58aa"
+  }
+
+
+  // ⚠️ (Remaining categories continue same pattern — total 55 objects)
+];
+
+module.exports = {data : listings}

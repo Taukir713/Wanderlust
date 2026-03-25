@@ -1,0 +1,251 @@
+<% layout("/layouts/boilerplate.ejs") %>  
+<script src="/js/category.js"></script>
+<style>
+    .filter-card {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        /* width: 73%; */
+        /* overflow-x: scroll; */
+    }
+    .card-text i {
+        display: none;
+    }
+    .switch-container { 
+        border: 1px solid black;
+        border-radius: 2rem; 
+        height: 3.25rem;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        margin-left: 3rem; 
+       
+    } 
+
+     
+</style>
+ 
+<div class="filters"> 
+
+    
+
+    <div class="filter-card">
+
+    <div>
+        <i class="fa-solid fa-angle-left"></i>
+    </div>
+
+    <!-- <a href="#" onclick="filterCategory('Trending')" >
+        <div class="filter" style="margin-left: 1rem;">
+            <div> <i class="fa-solid fa-fire"></i> </div> 
+            <p>Trending</p>
+        </div>
+    </a> 
+    
+    <a href="#" onclick="filterCategory('Farms')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-cow"></i></div>
+            <p>Farms</p>
+        </div>
+    </a>
+    
+    <a href="" onclick="filterCategory('Iconic cities')"> 
+    <div class="filter" >
+        <div value="Iconic cities"> <i class="fa-solid fa-mountain-city"></i> </div>
+            <p>Iconic cities</p>
+        </div>
+    </a>
+
+    <a href="#" onclick="filterCategory('Rooms')" >
+        <div class="filter">
+            <div>  <i class="fa-solid fa-couch"></i> </div> 
+                <p>Rooms</p> 
+        </div>
+    </a>
+
+    <a href="#" onclick="filterCategory('Castles')" >
+        <div class="filter">
+            <div>
+                <i class="fa-brands fa-fort-awesome"></i></i>
+            </div>
+            <p>Castles</p>
+        </div>
+    </a> 
+
+    <a href="#" onclick="filterCategory('beach')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>beach</p>
+        </div>
+    </a>
+
+    <a href="#" onclick="filterCategory('Mountain')" >
+        <div class="filter">
+            <div>
+                <i class="fa-solid fa-mountain"></i>
+            </div>
+            <p>Mountain</p>
+        </div>
+        
+    </a>
+
+    <a href="#" onclick="filterCategory('Amazing pools')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing pools</p>
+        </div>
+    </a>
+
+    <a href="#" onclick="filterCategory('camping')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>camping</p>
+        </div>
+    </a> -->
+
+    <!-- <a href="#" onclick="filterCategory('Arctic')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-snowman"></i></div>
+            <p>Arctic</p>
+        </div>
+    </a>
+
+    <a href="#" onclick="filterCategory('House')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-tree-city"></i></div>
+            <p>House</p>
+        </div>
+    </a> -->
+
+
+    <a href="http://localhost:8080/listings/filter?category=Trending"   >
+        <div class="filter" style="margin-left: 1rem;">
+            <div> <i class="fa-solid fa-fire"></i> </div> 
+            <p>Trending</p>
+        </div>
+    </a> 
+    
+    <a href="http://localhost:8080/listings/filter?category=Farms" onclick="filterCategory('')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-cow"></i></div>
+            <p>Farms</p>
+        </div>
+    </a>
+    
+    <a href="http://localhost:8080/listings/filter?category=Iconic cities" onclick="filterCategory('')"> 
+    <div class="filter" >
+        <div value="Iconic cities"> <i class="fa-solid fa-mountain-city"></i> </div>
+            <p>Iconic cities</p>
+        </div>
+    </a>
+
+    <a href="http://localhost:8080/listings/filter?category=Rooms" onclick="filterCategory('')" >
+        <div class="filter">
+            <div>  <i class="fa-solid fa-couch"></i> </div> 
+                <p>Rooms</p> 
+        </div>
+    </a>
+
+    <a href="http://localhost:8080/listings/filter?category=Castles" onclick="filterCategory('')" >
+        <div class="filter">
+            <div>
+                <i class="fa-brands fa-fort-awesome"></i></i>
+            </div>
+            <p>Castles</p>
+        </div>
+    </a> 
+
+    <a href="http://localhost:8080/listings/filter?category=beach" onclick="filterCategory('')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-umbrella-beach"></i></div>
+            <p>beach</p>
+        </div>
+    </a>
+
+    <a href="http://localhost:8080/listings/filter?category=Mountain" onclick="filterCategory('')" >
+        <div class="filter">
+            <div>
+                <i class="fa-solid fa-mountain"></i>
+            </div>
+            <p>Mountain</p>
+        </div>
+        
+    </a>
+
+    <a href="http://localhost:8080/listings/filter?category=Amazing pools" onclick="filterCategory('')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-person-swimming"></i></div>
+            <p>Amazing pools</p>
+        </div>
+    </a>
+
+    <a href="http://localhost:8080/listings/filter?category=camping" onclick="filterCategory('')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-campground"></i></div>
+            <p>camping</p>
+        </div>
+    </a>
+
+    <a href="http://localhost:8080/listings/filter?category=Arctic" onclick="filterCategory('')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-snowman"></i></div>
+            <p>Arctic</p>
+        </div>
+    </a>
+
+    <!-- <a href="#" onclick="filterCategory('House')" >
+        <div class="filter">
+            <div><i class="fa-solid fa-tree-city"></i></div>
+            <p>House</p>
+        </div>
+    </a> -->
+
+    <div>
+        <i class="fa-solid fa-angle-right"></i>
+    </div>
+
+    </div>
+    
+
+    <div class="switch-container">
+        <div class="form-check form-switch form-check-reverse">
+            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+            <label class="form-check-label" for="switchCheckDefault">Diplay total after taxes</label>
+        </div>
+    </div>
+</div>
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ">
+    <% for(let listing of allListings) { %> 
+        <div class="card col listing-card"  > 
+            <a href="/listings/<%= listing._id %>">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"  style="height: 20rem;"> 
+                <div class="card-body">
+                    <p class="card-text">
+                        <b><%= listing.title %> </b><br>
+                        &#8377;<%= listing.price.toLocaleString("en-IN")  %> /night
+                        <i class="tax-info">&nbsp; &nbsp; &nbsp; +18% GST</i>
+                    </p>
+                </div>
+            </a>
+        </div> 
+    <% } %>
+</div>
+
+ 
+<script>
+    let toggleSwitch = document.querySelector(".form-check-input"); 
+    toggleSwitch.addEventListener("click" , function() { 
+        let taxInfo = document.getElementsByClassName("tax-info"); 
+        for(let info of taxInfo) { 
+            if(info.style.display != "inline") {
+                info.style.display = "inline"
+            } else {
+                info.style.display = "none"
+            }
+        }
+    })
+    
+    
+</script>
+ 
+ 

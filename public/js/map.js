@@ -1,14 +1,15 @@
  
 
 let lattitude = coordinates[0] || 19.1737108;
-let longitude = coordinates[1] || 72.8605214;
+let longitude = coordinates[1] || 72.8605214;   
 
 var map = L.map('map' , {
     center : [lattitude , longitude] ,
     zoom : 9
-})
+}) 
 
 var myIcon = L.divIcon({  
+    
     html :
     `<div class="inner-div"> 
         <i class="fa-regular fa-house"></i>

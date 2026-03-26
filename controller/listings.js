@@ -10,7 +10,7 @@ function escapeRegex(text) {
 }
 
 module.exports.getFilterlist = async (req,res) => {
-    let category = req.query.category;
+    let category = req.query.category; 
     let filterListing = await Listing.find({category });
     res.render("listings/filter.ejs" ,{filterListing})
 }

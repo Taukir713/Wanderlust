@@ -1,88 +1,86 @@
 <% layout("/layouts/boilerplate.ejs") %>  
-<script src="/js/category.js"></script>
-
+<script src="/js/category.js"></script> 
  
 <div class="filters">  
     <div class="filter-card">
 
         <div>
             <i class="fa-solid fa-angle-left"></i>
-        </div>
-     
-        <a href="<%= API_URL %>/filter?category=Trending"   >
-            <div class="filter" style="margin-left: 1rem;">
+        </div> 
+        
+        <div class="filter " style="margin-left: 1rem; ">
+            <a href="http://localhost:8080/listings/filter?category=Trending"   >
                 <div> <i class="fa-solid fa-fire"></i> </div> 
                 <p>Trending</p>
-            </div>
-        </a>  
+            </a>  
+        </div> 
         
-        <a href="<%= API_URL %>/filter?category=Farms" onclick="filterCategory('')" >
-            <div class="filter">
+        <div class="filter">
+            <a href="<%= API_URL %>/filter?category=Farms" onclick="filterCategory('')" >
                 <div><i class="fa-solid fa-cow"></i></div>
                 <p>Farms</p>
-            </div>
-        </a>
-        
-        <a href="<%= API_URL %>/filter?category=Iconic cities" onclick="filterCategory('')"> 
+            </a>
+        </div> 
+         
         <div class="filter" >
-            <div value="Iconic cities"> <i class="fa-solid fa-mountain-city"></i> </div>
-                <p>Iconic cities</p>
-            </div>
-        </a>
+            <a href="<%= API_URL %>/filter?category=Iconic cities" onclick="filterCategory('')">
+                <div value="Iconic cities"> <i class="fa-solid fa-mountain-city"></i> </div>
+                    <p>Iconic cities</p>
+            </a>
+        </div> 
 
-        <a href="<%= API_URL %>/filter?category=Rooms" onclick="filterCategory('')" >
-            <div class="filter">
+        <div class="filter"> 
+            <a href="<%= API_URL %>/filter?category=Rooms" onclick="filterCategory('')" >
                 <div>  <i class="fa-solid fa-couch"></i> </div> 
-                    <p>Rooms</p> 
-            </div>
-        </a>
-
-        <a href="<%= API_URL %>/filter?category=Castles" onclick="filterCategory('')" >
-            <div class="filter">
+                <p>Rooms</p> 
+            </a>
+        </div>
+        
+        <div class="filter">
+            <a href="<%= API_URL %>/filter?category=Castles" onclick="filterCategory('')" >
                 <div>
                     <i class="fa-brands fa-fort-awesome"></i></i>
                 </div>
                 <p>Castles</p>
-            </div>
-        </a> 
+            </a> 
+        </div>
 
-        <a href="<%= API_URL %>/filter?category=beach" onclick="filterCategory('')" >
-            <div class="filter">
+        <div class="filter">
+            <a href="<%= API_URL %>/filter?category=beach" onclick="filterCategory('')" >
                 <div><i class="fa-solid fa-umbrella-beach"></i></div>
-                <p>beach</p>
-            </div>
-        </a>
+                <p>beach</p> 
+            </a>
+        </div>
 
-        <a href="<%= API_URL %>/filter?category=Mountain" onclick="filterCategory('')" >
-            <div class="filter">
+        <div class="filter">
+            <a href="<%= API_URL %>/filter?category=Mountain" onclick="filterCategory('')" >
                 <div>
                     <i class="fa-solid fa-mountain"></i>
                 </div>
                 <p>Mountain</p>
-            </div>
-            
-        </a>
+            </a>
+        </div>
 
-        <a href="<%= API_URL %>/filter?category=Amazing pools" onclick="filterCategory('')" >
-            <div class="filter">
+        <div class="filter">
+            <a href="<%= API_URL %>/filter?category=Amazing pools" onclick="filterCategory('')" >
                 <div><i class="fa-solid fa-person-swimming"></i></div>
                 <p>Amazing pools</p>
-            </div>
-        </a>
+            </a>
+        </div>
 
-        <a href="<%= API_URL %>/filter?category=camping" onclick="filterCategory('')" >
-            <div class="filter">
+        <div class="filter">
+            <a href="<%= API_URL %>/filter?category=camping" onclick="filterCategory('')" >
                 <div><i class="fa-solid fa-campground"></i></div>
                 <p>camping</p>
-            </div>
-        </a>
+            </a>
+        </div>
 
-        <a href="<%= API_URL %>/filter?category=Arctic" onclick="filterCategory('')" >
-            <div class="filter">
+        <div class="filter">
+            <a href="<%= API_URL %>/filter?category=Arctic" onclick="filterCategory('')" >
                 <div><i class="fa-solid fa-snowman"></i></div>
                 <p>Arctic</p>
-            </div>
-        </a> 
+            </a>
+        </div> 
 
         <div>
             <i class="fa-solid fa-angle-right"></i>
@@ -90,14 +88,14 @@
 
     </div> 
 
-    <div class="switch-container">
+    <div class="switch-container mb-2">
         <div class="form-check form-switch form-check-reverse">
             <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
             <label class="form-check-label" for="switchCheckDefault">Diplay total after taxes</label>
         </div>
     </div>
 </div>
-<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 ">
+<div class="row row-cols-lg-3 row-cols-md-2  row-cols-sm-1 row-cols-1 ">
     <% for(let listing of allListings) { %> 
         <div class="card col listing-card"  > 
             <a href="/listings/<%= listing._id %>">

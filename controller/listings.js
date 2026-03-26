@@ -16,8 +16,9 @@ module.exports.getFilterlist = async (req,res) => {
 }
  
 module.exports.index = async (req,res) => {
-    const allListings = await Listing.find({});   
-    res.render("listings/index.ejs" , {allListings}); 
+    const allListings = await Listing.find({}); 
+    let API_URL = process.env.API_URL
+    res.render("listings/index.ejs" , {allListings , API_URL}); 
 }
 
 module.exports.renderNewForm =  async (req,res) => {

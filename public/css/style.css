@@ -193,3 +193,25 @@ body {
 .fa-angle-left ,.fa-angle-right:hover {
     cursor: pointer;
 }
+
+
+.filter-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* width: 73%; */
+    /* overflow-x: scroll; */
+}
+.card-text i {
+    display: none;
+}
+.switch-container { 
+    border: 1px solid black;
+    border-radius: 2rem; 
+    height: 3.25rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: 3rem; 
+    
+} 

@@ -1,3 +1,3 @@
 function filterCategory(category) {
-    window.location.href = `http://localhost:8080/listings/filter?category=${category}`;
+    window.location.href = `https://wanderlust-xnwr.onrender.com/listings/filter?category=${category}`;
 }

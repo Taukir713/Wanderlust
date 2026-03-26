@@ -92,14 +92,13 @@ module.exports.destroyListing = async (req,res) => {
 }
  
 module.exports.searchListing = async (req, res) => {
-    console.log(req.params)
     let {country} = req.body;
-    let filterListing = await Listing.find({
+    let listings = await Listing.find({
         $or: [
             { location: { $regex: escapeRegex(country), $options: "i" } },
             { country: { $regex: escapeRegex(country), $options: "i" } }
         ]
         }) 
-    res.render("listings/filter.ejs" , {filterListing})
+    res.render("listings/search.ejs" , {listings , country})
 }
 

@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate.ejs") %>   
+<% if (listings.length) { %> 
+<h4 class="mt-2">Available Listing for <%= country %></h4>
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3"> 
+    <% for(let listing of listings) { %>  
+        <div class="card col listing-card"  > 
+            <a href="/listings/<%= listing._id %>">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image"  style="height: 20rem;"> 
+                <div class="card-body">
+                    <p class="card-text">
+                        <b><%= listing.title %> </b><br>
+                        &#8377;<%= listing.price.toLocaleString("en-IN")  %> /night
+                    </p>
+                </div>
+            </a>
+        </div> 
+    <% } %>
+    <% } else { %>
+        <div> 
+            <h2 class=" mt-2">Listing is not available for <%= country %></h2>
+        </div>
+        
+    <% } %>
+</div>

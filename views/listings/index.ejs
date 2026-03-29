@@ -9,7 +9,7 @@
         </div> 
         
         <div class="filter " style="margin-left: 1rem; ">
-            <a href="<%= API_URL %>/filter?category=Trending"   >
+            <a href="http://localhost:8080/listings/filter?category=Trending"   >
                 <div> <i class="fa-solid fa-fire"></i> </div> 
                 <p>Trending</p>
             </a>  
@@ -95,7 +95,7 @@
         </div>
     </div>
 </div>
-<div class="row row-cols-lg-3 row-cols-md-2  row-cols-sm-1 row-cols-1 ">
+<div class="row row-cols-lg-3 row-cols-md-2  row-cols-sm-1 row-cols-1 listing-container">
     <% for(let listing of allListings) { %> 
         <div class="card col listing-card"  > 
             <a href="/listings/<%= listing._id %>">

@@ -23,6 +23,9 @@ body {
     z-index: 100;
 } 
 
+.features {
+    display: none !important;
+}
 .fa-compass {
     color: #fe424d; 
     font-size: 2rem;
@@ -211,6 +214,7 @@ body {
 .card-text i {
     display: none;
 }
+
 .switch-container { 
     border: 1px solid black;
     border-radius: 2rem; 
@@ -221,3 +225,196 @@ body {
     margin-left: 3rem; 
     
 } 
+/* Mobile Friendly Style */
+
+
+/* Login Signup Page */
+
+.login-form , .sign-up {
+    width: 50% !important;
+    margin: 0 auto;
+}
+
+@media(width < 992px) {
+    .sign-up , .login-form {
+        width: 90% !important;
+    }
+}
+
+@media(width < 768px) {
+    .sign-up , .login-form {
+        width: 90% !important;
+    }
+}
+
+@media(width < 576px) {
+    .sign-up , .login-form {
+        width: 80% !important;
+    }
+}
+
+/* Show Page */
+
+.show-page-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-container > h3 {
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 0.5rem;
+}
+
+.show-card {
+    width: 50% !important;
+    margin: 0 auto;
+}
+
+.btns {
+    display: flex; 
+    justify-content: flex-start;
+    
+}
+
+.btns > div {
+    margin-right: 1rem;
+}
+
+.review-card {
+    border: 1px solid black;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-left: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.map-container {  
+    /* width: 50% !important; */
+    margin: 0 auto;
+}
+
+@media(width < 992px) {
+    .heading-container > h3 {
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .show-card {
+        width: 70% !important;
+        margin: 0 auto;
+    }
+
+    .map-container {  
+        /* width: 70% !important; */
+        margin: 0 auto;
+    }
+     
+}
+
+
+@media(width < 768px) {
+    .show-card {
+        width: 80% !important;
+        margin: 0 auto;
+    }
+
+    .heading-container > h3 {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .map-container {  
+        /* width: 80% !important; */
+        margin: 0 auto;
+    }
+
+    
+}
+ 
+
+@media (width < 576px) {
+    .show-card {
+        width: 80% !important;
+        margin: 0 auto;
+         
+    }
+
+    .heading-container > h3 {
+        width: 80%;
+        margin: 0 auto !important;
+        padding-bottom: 0.5rem;
+    }
+    
+    .map-container {  
+        /* width: 100% !important; */
+        margin: 0 auto;
+    }
+
+}
+
+/* Edit Page */
+
+.edit-card {
+    width: 60% !important;
+    margin: 0 auto;
+}
+
+@media(width < 991px) {
+    .edit-card {
+        width: 75% !important;
+    }
+}
+
+@media(width < 768px) {
+    .edit-card {
+        width: 95% !important;
+    }
+} 
+
+@media(width < 450px) {
+    .edit-card {
+        width: 90% !important;
+    }
+}
+
+/* Index Page */
+
+
+
+@media(width < 576px) {
+    
+    .features {
+        display: inline !important;
+    }
+
+    .filters {
+        display: none !important;
+    }
+
+    .listing-container::before {
+        content: "All Listings" !important;
+        font-size: 2rem !important;
+        display: block !important;  
+        margin: 0.4rem 1rem !important;
+    }
+
+    .switch-container {
+        margin: 0 auto !important;
+    }
+
+    .card-img-top {
+        border-radius: 1rem !important;
+        width: 80% !important;
+        height: 80% !important;
+        object-fit: cover !important;
+    }
+
+    .listing-card   { 
+        margin-bottom: 0.7rem !important; 
+    }
+
+    
+}

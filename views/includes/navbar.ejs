@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top">
+<nav class="navbar navbar-expand-md bg-body-tertiary border-bottom sticky-top mb-3">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,14 +17,22 @@
     </div>
       <div class="navbar-nav ms-auto">
         <a class="nav-link" href="/listings/new">Airbnb your home</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Trending">Trending</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Farms">Farms</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Iconic Cities">Iconic Cities</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Rooms">Rooms</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Castles">Castles</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Beach">Beach</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Mountain">Mountain</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Amazing Pools">Amazing Pools</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Camping">Camping</a>
+        <a class="nav-link features" href="<%= API_URL %>/filter?category=Arctic">Arctic</a>  
         <% if (!currUser)  { %>
           <a class="nav-link active"   href="/signup"><b>Signup</b></a>
           <a class="nav-link" href="/login"><b>Login</b></a>
         <% } else {  %>
           <a class="nav-link" href="/logout"><b>Logout</b></a>
         <%  }  %>
-        
-        
       </div>
     </div>
   </div>

@@ -433,3 +433,28 @@ body {
         margin: 0 auto !important;
     }
 }
+
+/* New Page */
+
+.new-container {
+    width: 60% !important;
+    margin: 0 auto;
+}
+
+@media(width < 991px) {
+    .new-container {
+        width: 75% !important;
+    }
+}
+
+@media(width < 768px) {
+    .new-container {
+        width: 95% !important;
+    }
+} 
+
+@media(width < 450px) {
+    .new-container {
+        width: 90% !important;
+    }
+}

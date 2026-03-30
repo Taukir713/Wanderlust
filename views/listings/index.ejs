@@ -9,7 +9,7 @@
         </div> 
         
         <div class="filter " style="margin-left: 1rem; ">
-            <a href="http://localhost:8080/listings/filter?category=Trending"   >
+            <a href="<%= API_URL %>/filter?category=Trending"   >
                 <div> <i class="fa-solid fa-fire"></i> </div> 
                 <p>Trending</p>
             </a>  
@@ -76,7 +76,7 @@
         </div>
 
         <div class="filter">
-            <a href="http://localhost:8080/listings/filter?category=Arctic" onclick="filterCategory('')" >
+            <a href="<%= API_URL %>/filter?category=Arctic" onclick="filterCategory('')" >
                 <div><i class="fa-solid fa-snowman"></i></div>
                 <p>Arctic</p>
             </a>

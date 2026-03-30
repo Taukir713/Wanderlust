@@ -458,3 +458,39 @@ body {
         width: 90% !important;
     }
 }
+
+/* Filter & Search Page Error */
+
+.msg-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fa-ghost {
+    font-size: 17rem;
+    opacity: 0.4; 
+
+}
+
+.msg-container > span {
+    font-size: 2rem;
+    font-weight: 600;
+    opacity: 0.4;
+}
+
+@media(width < 768px) {
+    .fa-ghost {
+        font-size: 12rem;
+        opacity: 0.4; 
+    }
+} 
+
+@media(width < 450px) { 
+    .fa-ghost {
+        font-size: 10rem;
+        opacity: 0.4; 
+    }
+}

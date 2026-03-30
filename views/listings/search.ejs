@@ -17,11 +17,9 @@
     <% } %>
 </div>
 <% } else { %>
-      <div class="row mt-3 mb-3 ">
-        <div class="alert alert-danger alert-dismissible fade show " role="alert"> 
-            <h6>Listing is not available for <%= country %></h6>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+      <div  class="msg-container">
+        <i class="fa-solid fa-ghost"  ></i>
+        <span>No data found</span> 
+        <a href="/listings" class="btn btn-outline-secondary " role="button"  >Go back to home page</a>
     </div>
-    <a href="<%= API_URL %>/listings" class="btn btn-primary " role="button" >Go back to home page</a>
 <% } %>

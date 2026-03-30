@@ -6,26 +6,28 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-}
+} 
 
 .container {
-    flex: 1;
+    flex: 1; 
 }
 
 /* Navbar */
 .navbar {
     height: 5rem;
     background-color: white;
+    z-index: 100 !important; 
 }
-
+ 
 #navbarNavAltMarkup { 
     background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
-    z-index: 100;
-} 
+    z-index: 100 !important;
+}  
 
 .features {
     display: none !important;
 }
+
 .fa-compass {
     color: #fe424d; 
     font-size: 2rem;
@@ -145,6 +147,7 @@ body {
 
 #map { 
     height: 400px;
+    z-index: 50;
     /* width: 80vh; */
 }
 
@@ -417,4 +420,16 @@ body {
     }
 
     
+}
+
+.alert-danger , .alert-warning {
+    width: 60% !important;
+    margin: 0 auto !important;
+}
+
+@media(width < 576px) {
+    .alert-danger , .alert-warning {
+        width: 80% !important;
+        margin: 0 auto !important;
+    }
 }

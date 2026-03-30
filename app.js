@@ -93,19 +93,14 @@ app.use("/listings" , listingsRouter);
 app.use("/listings/:id/reviews" , reviewsRouter );
 app.use("/" , userRouter);
 
-app.get("/listings/filters" , (req,res) => {
-    console.log(req.body)
-})
  
-app.use(( req,res,next) => {
+app.use((req,res,next) => {
     next(new ExpressError(404,"page not found") )
 })
 
 app.use((err,req,res,next) => { 
-    let  {status = 500  , message = "something went wrong" } = err;
-    console.log(status , message)
-    res.status(status).render("listings/error.ejs" , {message});
-    // res.status(status).send(message);/
+    let  {status = 500  , message = "something went wrong" } = err; 
+    res.status(status).render("listings/error.ejs" , {message}); 
 })
 
 app.listen (port,() => {

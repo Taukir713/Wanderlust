@@ -7,8 +7,9 @@ Wanderlust allows users to discover vacation rentals, create property listings, 
 ![Node.js](https://img.shields.io/badge/Node.js-v22-339933?style=flat&logo=node.js)
 ![Express](https://img.shields.io/badge/Express-v5-000000?style=flat&logo=express)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=flat&logo=mongodb)
-![EJS](https://img.shields.io/badge/EJS-Templates-8BC34A?style=flat)
+![EJS](https://img.shields.io/badge/EJS-Template-B4CA65?style=flat)
 ![Passport.js](https://img.shields.io/badge/Passport.js-Authentication-34E27A?style=flat)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat)
 
 ---
@@ -16,7 +17,7 @@ Wanderlust allows users to discover vacation rentals, create property listings, 
 ## 🌐 Live Demo
 
 **Application:**  
-> * https://wanderlust-xnwr.onrender.com/listings*
+> https://wanderlust-xnwr.onrender.com/listings
 
 ---
 
@@ -95,7 +96,7 @@ MongoDB Atlas
 | Database | MongoDB, Mongoose |
 | Authentication | Passport.js, Express Session |
 | Image Storage | Cloudinary, Multer |
-| Maps | Mapbox |
+| Maps | Leaflet |
 | Deployment | Render |
 
 ---
@@ -175,8 +176,7 @@ Through this project I gained practical experience with:
 
 **Taukir Rafique Shaikh**
 
-- GitHub: https://github.com/Taukir713
-- LinkedIn: *(Add your LinkedIn profile)*
+- GitHub: https://github.com/Taukir713 
 - Email: shaikhtaukir713@gmail.com
 
 ---

@@ -10,7 +10,6 @@ Wanderlust allows users to discover vacation rentals, create property listings, 
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) 
 [![EJS](https://img.shields.io/badge/EJS-Template-B4CA65?style=flat)](https://ejs.co/) 
 [![Passport.js](https://img.shields.io/badge/Passport.js-Authentication-34E27A?style=flat)](https://www.passportjs.org/)
-[![Responsive](https://img.shields.io/badge/Responsive-Yes-success)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) 
 [![License](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
 
 ---
